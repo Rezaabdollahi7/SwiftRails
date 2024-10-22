@@ -4,21 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>SwiftRails</title>
     <link rel="stylesheet" href="../styles/dist/output.css">
     <link rel="stylesheet" href="../assets/fonts/css/fontiran.css">
-    <!-- change page theme  -->
-    <!-- <script>
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.classList.add('dark');
-        }
-    </script> -->
 </head>
 
-<body class="bg-secondary1   font-dana">
-    <h1 class="text-center text-primary1 font-dana">
-        سلام
-    </h1>
+<body class="bg-neutrals8  font-dana">
+
+    <div class="bg-gray-100">
+
+        <!-- Alpine.js navbar -->
+        <nav class="bg-white shadow-md" x-data="{ isOpen: false }">
+            <div class="container mx-auto px-4 w-4/5">
+                <div class="flex justify-between items-center py-4">
+                    <!-- Logo -->
+                    <a class="flex items-center gap-4" href="#">
+                        <img src="../assets/icons/bullet-train.png" alt="Logo" class="h-12 w-12  ">
+                        <span class="ml-3 lg:heading-1  text-neutrals3 ">رزرو بلیط </span>
+                    </a>
+
+                    <!-- Links - Hidden on small screens -->
+                    <div class="hidden lg:flex space-x-8 text-gray-600">
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">صفحه اصلی </a>
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">تور ها</a>
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">پیشنهادات ویژه </a>
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">خبرنامه</a>
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">درباره ما</a>
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">ارتباط با ما</a>
+                    </div>
+
+                    <!-- Buttons for login/signup -->
+                    <div class="hidden lg:flex space-x-4 items-center">
+                        <a href="#"
+                            class="text-neutrals3 heading-3 hover:bg-secondary1-25 transition-all outline outline-1 outline-neutrals6 px-6 py-2 rounded-full">ورود</a>
+                        <a href="#"
+                            class="px-6 py-2 bg-primary1 hover:bg-primary1-75 transition-all text-yellow-50 rounded-full heading-3 ">
+                            ثبتنام</a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden">
+                        <button @click="isOpen = !isOpen" class="focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div x-show="isOpen" class="lg:hidden">
+                    <div class="flex flex-col space-y-8 mt-4 pb-8 items-end">
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">صفحه اصلی </a>
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">تور ها</a>
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">پیشنهادات ویژه </a>
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">خبرنامه</a>
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">درباره ما</a>
+                        <a href="#" class="text-neutrals4 hover:text-neutrals2">ارتباط با ما</a>
+                        <div class="log-sign-wrapper flex gap-4 justify-center items-center w-full">
+
+                            <a href="#"
+                                class="text-neutrals3 heading-3 outline outline-1 outline-neutrals6 px-8 py-2 rounded-full">ورود</a>
+                            <a href="#" class="px-8 py-2 bg-primary1 text-yellow-50 rounded-full heading-3 ">
+                                ثبتنام</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Alpine.js -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </body>
 
 </html>
