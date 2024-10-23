@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: black;
+        font-family: "Agdasima", sans-serif;
+    }
+
+    .button {
+        /* in scss with just one variable i can change opacity with rgba(variable, opacity) but in css it's not possible so i have used three seperate variables */
+        /* with hue-rotate color can be changed */
+        --main-color: rgb(46, 213, 115);
+        --main-bg-color: rgba(46, 213, 116, 0.36);
+        --pattern-color: rgba(46, 213, 116, 0.073);
+
+        /* change this rotation value */
+        filter: hue-rotate(0deg);
+
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        background: radial-gradient(circle,
+                var(--main-bg-color) 0%,
+                rgba(0, 0, 0, 0) 95%),
+            linear-gradient(var(--pattern-color) 1px, transparent 1px),
+            linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+        background-size:
+            cover,
+            15px 15px,
+            15px 15px;
+        background-position:
+            center center,
+            center center,
+            center center;
+        border-image: radial-gradient(circle,
+                var(--main-color) 0%,
+                rgba(0, 0, 0, 0) 100%) 1;
+        border-width: 1px 0 1px 0;
+        color: var(--main-color);
+        padding: 1rem 3rem;
+        font-weight: 700;
+        font-size: 1.5rem;
+        transition: background-size 0.2s ease-in-out;
+    }
+
+    .button:hover {
+        background-size:
+            cover,
+            10px 10px,
+            10px 10px;
+    }
+
+    .button:active {
+        filter: hue-rotate(250deg);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <a href="./src/views/index.html" target="_blank" class="button">Home Page</a>
+    </div>
+
+</body>
+
+</html>
