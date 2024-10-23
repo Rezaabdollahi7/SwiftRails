@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="../assets/fonts/css/fontiran.css">
 </head>
 
-<body class="bg-neutrals8  font-dana">
+<body class="bg-neutrals8-10  font-dana overflow-x-hidden relative">
+    <div
+        class="left-abs-img-container absolute top-[-12rem] left-[-20rem]  lg:top-[-8rem] lg:left-[-16rem] opacity-20  lg:opacity-30">
+        <div class="w-[30rem] h-[30rem] bg-[#22FFD6] rounded-full blur-3xl"></div>
+    </div>
 
-    <div class="bg-gray-100">
-
+    <!-- ! navbar -->
+    <div id="nav">
         <!-- Alpine.js navbar -->
         <nav class="bg-white shadow-md" x-data="{ isOpen: false }">
             <div class="container mx-auto px-4 w-4/5">
@@ -74,9 +78,47 @@
                 </div>
             </div>
         </nav>
-
     </div>
 
+    <!-- ! header -->
+    <section id="header" class=" grid lg:grid-cols-10 gap-4 h-96 container mx-auto px-4 lg:mt-20 w-4/5">
+
+        <div class="left-wrapper lg:col-span-6 flex flex-col items-center justify-center">
+            <img class="h-[24rem]  lg:h-[35rem]" src="../assets/images/headerimg.svg" alt="">
+        </div>
+
+        <div class="right-wrapper lg:col-span-4 flex flex-col items-end justify-center">
+            <a href="#"
+                class="bg-white text-mypink rounded-3xl shadow-glow px-6 py-2 flex justify-center items-center gap-4">
+                <span class="text-sm lg:text-base">
+                    هدیه ای به کل ایران
+                </span>
+                <img src="../assets/icons/gift.svg" alt="">
+            </a>
+            <h1
+                class="text-3xl   lg:text-[60px] leading-10  lg:leading-[5rem] my-8 font-bold text-center  lg:text-right">
+                بزرگترین مرجع <span class="text-mypink">رزرو بلیط </span> در ایران </h1>
+            <p class="text-neutrals4-75 text-justify  lg:text-right">
+                وبسایت رزرو بلیط جاییه که می‌تونی راحت و سریع بلیط مسافرتی و تورهای مختلف رو رزرو کنی. با پیشنهادهای
+                ویژه و پشتیبانی
+                عالی، سفر رو برات آسون و بی‌دغدغه می‌کنیم
+            </p>
+            <div class="flex justify-center items-center gap-4 my-8 w-full  lg:w-max">
+                <a href="#"
+                    class="px-6 py-2 rounded-full text-white shadow-purple-600  bg-primary2 font-semibold text-base  lg:text-lg">بزن
+                    بریم </a>
+                <a href="#"
+                    class="px-6 py-2 rounded-full text-black border border-gray-400 font-semibold text-base  lg:text-lg ">
+                    دیدن تور ها </a>
+            </div>
+        </div>
+
+    </section>
+
+    <div
+        class="right-abs-img-container absolute lg:top-[24rem] right-[-24rem]  lg:right-[-20rem] opacity-20  lg:opacity-30">
+        <div class="w-[30rem] h-[30rem] bg-[#FACD49] rounded-full blur-3xl"></div>
+    </div>
     <!-- Alpine.js -->
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 

@@ -151,7 +151,7 @@ module.exports = {
         25: 'rgba(230, 232, 236, 0.25)',
         10: 'rgba(230, 232, 236, 0.10)',
       },
-
+      mypink: '#F85E9F',
       lightBackground: '#ffffff',
       darkBackground: '#1e1e1e',
       lightText: '#141416',
