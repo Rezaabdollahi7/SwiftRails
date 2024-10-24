@@ -3,7 +3,7 @@ import plugin from 'tailwindcss/plugin';
 import colors from 'tailwindcss/colors';
 module.exports = {
   content: [
-    './**/*.{html,js}',
+    './src/**/*.{html,js,css}',
   ],
   darkMode: 'media',
   theme: {
@@ -182,12 +182,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
     },
-    boxShadow: {
-      simple: '0 0 4px rgba(0, 0, 34, 0.20000000298023224)',
-      'simple-01': '0 1px 4px rgba(0, 0, 34, 0.4000000059604645)',
-      'simple-02': '0 2px 4px rgba(0, 0, 34, 0.20000000298023224)',
-      glow: '0px 0px 4px 0.5px rgba(255, 132, 4, 0.20000000298023224)',
-    },
+
 
   },
   plugins: [
@@ -265,6 +260,9 @@ module.exports = {
           fontSize: theme('fontSize.xs'),
           lineHeight: theme('lineHeight.4'),
           fontWeight: theme('fontWeight.normal'),
+        },
+        '.center-absolute': {
+          transform: 'translate(-50%, -50%)',
         },
         respectPrefix: true,
         respectImportant: true,

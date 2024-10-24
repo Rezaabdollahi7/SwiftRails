@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwiftRails</title>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../styles/dist/output.css">
     <link rel="stylesheet" href="../assets/fonts/css/fontiran.css">
+
+
 </head>
 
 <body class="bg-neutrals8-10  font-dana overflow-x-hidden relative">
+    <!-- !left absolute image  -->
     <div
         class="left-abs-img-container absolute top-[-12rem] left-[-20rem]  lg:top-[-8rem] lg:left-[-16rem] opacity-20  lg:opacity-30">
         <div class="w-[30rem] h-[30rem] bg-[#22FFD6] rounded-full blur-3xl"></div>
@@ -81,7 +86,7 @@
     </div>
 
     <!-- ! header -->
-    <section id="header" class=" grid lg:grid-cols-10 gap-4 h-96 container mx-auto px-4 lg:mt-20 w-4/5">
+    <section id="header" class=" grid lg:grid-cols-10 gap-4  container mx-auto px-4 lg:mt-20 w-4/5">
 
         <div class="left-wrapper lg:col-span-6 flex flex-col items-center justify-center">
             <img class="h-[24rem]  lg:h-[35rem]" src="../assets/images/headerimg.svg" alt="">
@@ -115,12 +120,264 @@
 
     </section>
 
+    <!-- !right absolute image -->
     <div
         class="right-abs-img-container absolute lg:top-[24rem] right-[-24rem]  lg:right-[-20rem] opacity-20  lg:opacity-30">
         <div class="w-[30rem] h-[30rem] bg-[#FACD49] rounded-full blur-3xl"></div>
     </div>
+
+    <!-- ! pop tours -->
+    <section id="pop-tours" class="w-4/5 mx-auto container my-32 relative ">
+        <h2 class="text-2xl lg:text-3xl font-bold text-mypink text-right">پرفروشترین تور ها </h2>
+        <p class=" text-base lg:heading-1 font-bold text-neutrals2 mt-4 text-right">
+            بهترین مکان های ایران را از نزدیک ببینید
+        </p>
+        <div class="swiper-button-prev "></div>
+        <div class="swiper-button-next "></div>
+        <!-- Slider main container -->
+        <div class="swiper  relative mt-12 w-full">
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper gap-10 py-8">
+                <!-- Slides -->
+                <div
+                    class="swiper-slide flex flex-col justify-center items-center shadow-lg shadow-neutrals4-10  bg-white border border-gray-200 rounded-3xl px-3 py-2">
+                    <div class="img-container relative group">
+                        <img src="../assets/images/headerimg.svg" alt=""
+                            class="group-hover:brightness-50 transition-all duration-300">
+                        <div
+                            class="explore absolute top-[50%] left-[50%] center-absolute translate-center shadow-xl shadow-gray-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <a href="#" class="bg-white rounded-2xl px-6 py-2 font-semibold">
+                                نمایش
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 font-semibold text-neutrals1 text-right w-full">
+                        تور زیارتی
+                    </p>
+                    <div class="wrapper flex justify-between items-center mt-2 flex-row-reverse w-full">
+                        <span class="text-neutrals3">تهران </span>
+                        <div class="price-wrapper gap-4 flex items-center">
+                            <span class=" text-neutrals5 text-sm line-through">9500,000</span>
+                            <span class=" text-xl font-bold text-primary1">
+                                700,000
+                            </span>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="date-container flex justify-between items-center w-full">
+                        <span class="text-sm md:text-xs xl:text-sm text-neutrals4 tracking-wide ">
+                            1403/7/11 - 1403/7/18
+                        </span>
+                        <div class="star-container flex gap-2">
+                            <img class="w-5 h-5 " src="../assets/icons/star.png" alt="">
+                            <span class="text-neutrals3 font-bold">4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="swiper-slide flex flex-col justify-center items-center shadow-lg shadow-neutrals4-10  bg-white border border-gray-200 rounded-3xl px-3 py-2">
+                    <div class="img-container relative group">
+                        <img src="../assets/images/headerimg.svg" alt=""
+                            class="group-hover:brightness-50 transition-all duration-300">
+                        <div
+                            class="explore absolute top-[50%] left-[50%] center-absolute translate-center shadow-xl shadow-gray-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <a href="#" class="bg-white rounded-2xl px-6 py-2 font-semibold">
+                                نمایش
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 font-semibold text-neutrals1 text-right w-full">
+                        تور زیارتی
+                    </p>
+                    <div class="wrapper flex justify-between items-center mt-2 flex-row-reverse w-full">
+                        <span class="text-neutrals3">تهران </span>
+                        <div class="price-wrapper gap-4 flex items-center">
+                            <span class=" text-neutrals5 text-sm line-through">9500,000</span>
+                            <span class=" text-xl font-bold text-primary1">
+                                700,000
+                            </span>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="date-container flex justify-between items-center w-full">
+                        <span class="text-sm md:text-xs xl:text-sm text-neutrals4 tracking-wide ">
+                            1403/7/11 - 1403/7/18
+                        </span>
+                        <div class="star-container flex gap-2">
+                            <img class="w-5 h-5 " src="../assets/icons/star.png" alt="">
+                            <span class="text-neutrals3 font-bold">4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="swiper-slide flex flex-col justify-center items-center shadow-lg shadow-neutrals4-10  bg-white border border-gray-200 rounded-3xl px-3 py-2">
+                    <div class="img-container relative group">
+                        <img src="../assets/images/headerimg.svg" alt=""
+                            class="group-hover:brightness-50 transition-all duration-300">
+                        <div
+                            class="explore absolute top-[50%] left-[50%] center-absolute translate-center shadow-xl shadow-gray-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <a href="#" class="bg-white rounded-2xl px-6 py-2 font-semibold">
+                                نمایش
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 font-semibold text-neutrals1 text-right w-full">
+                        تور زیارتی
+                    </p>
+                    <div class="wrapper flex justify-between items-center mt-2 flex-row-reverse w-full">
+                        <span class="text-neutrals3">تهران </span>
+                        <div class="price-wrapper gap-4 flex items-center">
+                            <span class=" text-neutrals5 text-sm line-through">9500,000</span>
+                            <span class=" text-xl font-bold text-primary1">
+                                700,000
+                            </span>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="date-container flex justify-between items-center w-full">
+                        <span class="text-sm md:text-xs xl:text-sm text-neutrals4 tracking-wide ">
+                            1403/7/11 - 1403/7/18
+                        </span>
+                        <div class="star-container flex gap-2">
+                            <img class="w-5 h-5 " src="../assets/icons/star.png" alt="">
+                            <span class="text-neutrals3 font-bold">4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="swiper-slide flex flex-col justify-center items-center shadow-lg shadow-neutrals4-10  bg-white border border-gray-200 rounded-3xl px-3 py-2">
+                    <div class="img-container relative group">
+                        <img src="../assets/images/headerimg.svg" alt=""
+                            class="group-hover:brightness-50 transition-all duration-300">
+                        <div
+                            class="explore absolute top-[50%] left-[50%] center-absolute translate-center shadow-xl shadow-gray-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <a href="#" class="bg-white rounded-2xl px-6 py-2 font-semibold">
+                                نمایش
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 font-semibold text-neutrals1 text-right w-full">
+                        تور زیارتی
+                    </p>
+                    <div class="wrapper flex justify-between items-center mt-2 flex-row-reverse w-full">
+                        <span class="text-neutrals3">تهران </span>
+                        <div class="price-wrapper gap-4 flex items-center">
+                            <span class=" text-neutrals5 text-sm line-through">9500,000</span>
+                            <span class=" text-xl font-bold text-primary1">
+                                700,000
+                            </span>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="date-container flex justify-between items-center w-full">
+                        <span class="text-sm md:text-xs xl:text-sm text-neutrals4 tracking-wide ">
+                            1403/7/11 - 1403/7/18
+                        </span>
+                        <div class="star-container flex gap-2">
+                            <img class="w-5 h-5 " src="../assets/icons/star.png" alt="">
+                            <span class="text-neutrals3 font-bold">4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="swiper-slide flex flex-col justify-center items-center shadow-lg shadow-neutrals4-10  bg-white border border-gray-200 rounded-3xl px-3 py-2">
+                    <div class="img-container relative group">
+                        <img src="../assets/images/headerimg.svg" alt=""
+                            class="group-hover:brightness-50 transition-all duration-300">
+                        <div
+                            class="explore absolute top-[50%] left-[50%] center-absolute translate-center shadow-xl shadow-gray-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <a href="#" class="bg-white rounded-2xl px-6 py-2 font-semibold">
+                                نمایش
+                            </a>
+                        </div>
+                    </div>
+                    <p class="mt-4 font-semibold text-neutrals1 text-right w-full">
+                        تور زیارتی
+                    </p>
+                    <div class="wrapper flex justify-between items-center mt-2 flex-row-reverse w-full">
+                        <span class="text-neutrals3">تهران </span>
+                        <div class="price-wrapper gap-4 flex items-center">
+                            <span class=" text-neutrals5 text-sm line-through">9500,000</span>
+                            <span class=" text-xl font-bold text-primary1">
+                                700,000
+                            </span>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="date-container flex justify-between items-center w-full">
+                        <span class="text-sm md:text-xs xl:text-sm text-neutrals4 tracking-wide ">
+                            1403/7/11 - 1403/7/18
+                        </span>
+                        <div class="star-container flex gap-2">
+                            <img class="w-5 h-5 " src="../assets/icons/star.png" alt="">
+                            <span class="text-neutrals3 font-bold">4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
     <!-- Alpine.js -->
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- pop tours slider -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 1,
+
+                },
+                // when window width is >= 640px
+                600: {
+                    slidesPerView: 2,
+                },
+                800: {
+                    slidesPerView: 3,
+                },
+                1000: {
+                    slidesPerView: 4.5,
+                }
+            }
+
+        });
+    </script>
 
 </body>
 
