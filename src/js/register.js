@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 
-import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup , onAuthStateChanged} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -46,13 +46,13 @@ google_login.addEventListener("click", function (event) {
         .then((result) => {
             const credential = GoogleAuthProvider.credentialFromResult(result);
             // const token = credential.accessToken;
-            
+
             // The signed-in user info.
             const user = result.user;
             console.log(user);
             window.location.href = '../views/index.html'
-            
-// ...
+
+            // ...
         }).catch((error) => {
 
             const errorCode = error.code;
@@ -64,6 +64,23 @@ google_login.addEventListener("click", function (event) {
             // The AuthCredential type that was used.
 
             // const credential = GoogleAuthProvider.credentialFromError(error);
-     
+
+        });
+})
+
+// --------------------------- reset email password ----------------
+const reset = document.getElementById("reset")
+reset.addEventListener("click", function (event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+
+    sendPasswordResetEmail(auth, email)
+        .then(() => {
+            alert("reset email sent . check it :))")
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage)
         });
 })
