@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup , onAuthStateChanged} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,8 +16,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app)
+auth.languageCode = 'en'
+const provider = new GoogleAuthProvider();
 
 const submit = document.getElementById('submit');
+const google_login = document.getElementById('google-login-btn')
 
 submit.addEventListener("click", function (event) {
     event.preventDefault();
@@ -28,12 +31,39 @@ submit.addEventListener("click", function (event) {
             const user = userCredential.user;
             alert("Creating user")
             console.log(user);
-            
+
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             alert(errorMessage)
+
+        });
+})
+
+google_login.addEventListener("click", function (event) {
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            // const token = credential.accessToken;
             
-        }); 
+            // The signed-in user info.
+            const user = result.user;
+            console.log(user);
+            window.location.href = '../views/index.html'
+            
+// ...
+        }).catch((error) => {
+
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+
+            // const email = error.customData.email;
+
+            // The AuthCredential type that was used.
+
+            // const credential = GoogleAuthProvider.credentialFromError(error);
+     
+        });
 })
