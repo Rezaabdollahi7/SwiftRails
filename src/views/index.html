@@ -15,10 +15,10 @@
 
 <body class="bg-neutrals8-10  font-dana overflow-x-hidden relative">
     <!-- !left absolute image  -->
-    <div
+    <!-- <div
         class="left-abs-img-container absolute top-[-12rem] left-[-20rem]  lg:top-[-8rem] lg:left-[-16rem] opacity-20  lg:opacity-30">
         <div class="w-[30rem] h-[30rem] bg-[#22FFD6] rounded-full blur-3xl"></div>
-    </div>
+    </div> -->
 
     <!-- ! navbar -->
     <div id="nav">
@@ -108,16 +108,143 @@
                 ویژه و پشتیبانی
                 عالی، سفر رو برات آسون و بی‌دغدغه می‌کنیم
             </p>
-            <div class="flex justify-center items-center gap-4 my-8 w-full  lg:w-max">
-                <a href="#"
-                    class="px-6 py-2 rounded-full text-white shadow-purple-600  bg-primary2 font-semibold text-base  lg:text-lg">بزن
-                    بریم </a>
-                <a href="#"
-                    class="px-6 py-2 rounded-full text-black border border-gray-400 font-semibold text-base  lg:text-lg ">
-                    دیدن تور ها </a>
-            </div>
+
+
         </div>
 
+        <!-- form -->
+        <formn class="flex justify-center items-end  my-8 max-[1200px] mx-auto gap-5 ">
+
+            <div class="flex flex-col md:flex-row items-end gap-8 relative w-[500px]">
+                <!-- کامبوباکس مبدا -->
+                <div class="flex-1">
+                    <div class="relative">
+                        <label for="origin-combobox" class="block text-sm font-medium leading-6 text-gray-900">
+                            مبدا
+                        </label>
+                        <div class="relative mt-2">
+                            <input id="origin-combobox" type="text"
+                                class="h-12 text-xl  w-full rounded-md border-0 bg-white py-1.5 pl-3 pr-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                role="combobox" aria-controls="origin-options" aria-expanded="false">
+                            <button type="button"
+                                class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none ">
+                                <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <ul class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+                                id="origin-options" role="listbox">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دکمه تعویض -->
+                <button type="button" id="swap-button"
+                    class="absolute left-1/2 top-1/2 -translate-x-1/2 transform bg-white p-2 rotate-90  rounded-full shadow-md hover:bg-gray-50 focus:outline-none border border-gray-200 z-20">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                    </svg>
+                </button>
+
+                <!-- کامبوباکس مقصد -->
+                <div class="flex-1">
+                    <div class="relative">
+                        <label for="destination-combobox" class="block text-sm font-medium leading-6 text-gray-900">
+                            مقصد
+                        </label>
+                        <div class="relative mt-2">
+                            <input id="destination-combobox" type="text"
+                                class="h-12 text-xl  w-full rounded-md border-0 bg-white py-1.5 pl-3 pr-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                role="combobox" aria-controls="destination-options" aria-expanded="false">
+                            <button type="button"
+                                class="absolute inset-y-0 left-0 flex items-center rounded-r-md px-2 focus:outline-none">
+                                <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <ul class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+                                id="destination-options" role="listbox">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- number of passengers -->
+            <div class="w-[180px]  rounded-lg relative ">
+                <!-- دکمه اصلی -->
+                <label class="text-gray-800">مسافران</label>
+                <button id="passengerButton"
+                    class="w-full p-4 text-right h-12 mt-2  rounded-md border-0 bg-white py-1.5 pl-3 pr-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 ">
+                    <div class="flex items-center justify-between">
+                        <span id="totalPassengers" class="text-gray-600">۴ مسافر</span>
+                    </div>
+                </button>
+
+                <!-- پنل انتخاب -->
+                <div id="passengerPanel" class="hidden p-4 w-[200%]  border-t absolute top-full bg-gray-100/50 shadow-lg rounded-lg">
+                    <!-- بزرگسال -->
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-4 space-x-reverse">
+                            <button onclick="updateCount('adult', 'decrease')"
+                                class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200">-</button>
+                            <span id="adultCount" class="w-8 text-center">۱</span>
+                            <button onclick="updateCount('adult', 'increase')"
+                                class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200">+</button>
+                        </div>
+                        <div class="w-1/2 text-center">
+                            <div class="font-medium">بزرگسال</div>
+                            <div class="text-sm text-gray-500">۱۲ سال به بالا</div>
+                        </div>
+                    </div>
+
+                    <!-- کودک -->
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-4 space-x-reverse">
+                            <button onclick="updateCount('child', 'decrease')"
+                                class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200">-</button>
+                            <span id="childCount" class="w-8 text-center">۰</span>
+                            <button onclick="updateCount('child', 'increase')"
+                                class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200">+</button>
+                        </div>
+                        <div class="w-1/2 text-center">
+                            <div class="font-medium">کودک</div>
+                            <div class="text-sm text-gray-500">۲ تا ۱۲ سال</div>
+                        </div>
+                    </div>
+
+                    <!-- نوزاد -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4 space-x-reverse">
+                            <button onclick="updateCount('infant', 'decrease')"
+                                class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200">-</button>
+                            <span id="infantCount" class="w-8 text-center">۰</span>
+                            <button onclick="updateCount('infant', 'increase')"
+                                class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200">+</button>
+                        </div>
+                        <div class="w-1/2 text-center">
+                            <div class="font-medium">نوزاد</div>
+                            <div class="text-sm text-gray-500">۱۰ روز تا ۲ سال</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="px-8 h-12 text-lg font-semibold rounded-xl bg-primary2-90 text-black">جستجو</button>
+            <!-- end numbers -->
+        </formn>
     </section>
 
     <!-- !right absolute image -->
@@ -1172,6 +1299,8 @@
 
         });
     </script>
+    <!-- origin input  -->
+    <script src="../js/home/destination-input.js"></script>
 
 </body>
 

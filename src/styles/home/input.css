@@ -8,9 +8,11 @@
     @apply font-dana;
   }
 }
+
 .swiper-button-prev {
-  @apply left-[-10%] lg:left-0  lg:top-[10%] rounded-3xl w-[58px] h-[58px] border border-gray-400 font-bold text-mypink hover:shadow-2xl hover:shadow-neutrals2-50 transition-shadow duration-300;
+  @apply left-[-10%] lg:left-0 lg:top-[10%] rounded-3xl w-[58px] h-[58px] border border-gray-400 font-bold text-mypink hover:shadow-2xl hover:shadow-neutrals2-50 transition-shadow duration-300;
 }
+
 .swiper-button-next {
-  @apply right-[-10%]  lg:left-[7%] lg:top-[10%] rounded-3xl w-[58px] h-[58px] border border-gray-400 font-bold text-mypink hover:shadow-2xl hover:shadow-neutrals2-50 transition-shadow duration-300;
+  @apply right-[-10%] lg:left-[7%] lg:top-[10%] rounded-3xl w-[58px] h-[58px] border border-gray-400 font-bold text-mypink hover:shadow-2xl hover:shadow-neutrals2-50 transition-shadow duration-300;
 }
