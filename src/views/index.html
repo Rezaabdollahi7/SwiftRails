@@ -44,9 +44,9 @@
 
                     <!-- Buttons for login/signup -->
                     <div class="hidden lg:flex space-x-4 items-center">
-                        <a href="#"
+                        <a href="./login.html" target="_blank"
                             class="text-neutrals3 heading-3 hover:bg-secondary1-25 transition-all outline outline-1 outline-neutrals6 px-6 py-2 rounded-full">ورود</a>
-                        <a href="#"
+                        <a href="./SignIn.html" target="_blank"
                             class="px-6 py-2 bg-primary1 hover:bg-primary1-75 transition-all text-yellow-50 rounded-full heading-3 ">
                             ثبتنام</a>
                     </div>
@@ -113,9 +113,10 @@
         </div>
 
         <!-- form -->
-        <formn class="flex justify-center items-end  my-8 max-[1200px] mx-auto gap-5 ">
+        <formn
+            class="flex justify-center items-end  my-8 max-[1200px] mx-auto gap-5 bg-white shadow-lg shadow-blue-200 py-12 px-8 rounded-2xl  ">
 
-            <div class="flex flex-col md:flex-row items-end gap-8 relative w-[500px]">
+            <div class="flex flex-col md:flex-row items-end gap-8 relative w-[600px]">
                 <!-- کامبوباکس مبدا -->
                 <div class="flex-1">
                     <div class="relative">
@@ -182,19 +183,53 @@
             </div>
 
 
+
+            <div id="date-range-picker" date-rangepicker class="flex items-center h-20">
+                <div class="relative">
+                    <label for="datepicker-range-start">تاریخ رفت</label>
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none mt-6 ">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </div>
+                    <input id="datepicker-range-start" name="start" type="text" datepicker-format="yy-mm-dd"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  h-12 mt-2 "
+                        placeholder="Select date start">
+                </div>
+                <span class="mx-4 text-gray-500 mt-[9%]">تا</span>
+                <div class="relative">
+                    <label for="datepicker-range-end">تاریخ برگشت</label>
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none mt-6">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </div>
+                    <input id="datepicker-range-end" name="end" type="text" datepicker-format="yy-mm-dd"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  h-12 mt-2"
+                        placeholder="Select date end">
+                </div>
+            </div>
+
+
+
             <!-- number of passengers -->
-            <div class="w-[180px]  rounded-lg relative ">
+            <div class=" rounded-lg relative ">
                 <!-- دکمه اصلی -->
                 <label class="text-gray-800">مسافران</label>
                 <button id="passengerButton"
-                    class="w-full p-4 text-right h-12 mt-2  rounded-md border-0 bg-white py-1.5 pl-3 pr-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 ">
+                    class="w-[180px]  p-4 text-right h-12 mt-2  rounded-md border-0 bg-white py-1.5 pl-3 pr-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 ">
                     <div class="flex items-center justify-between">
                         <span id="totalPassengers" class="text-gray-600">۴ مسافر</span>
                     </div>
                 </button>
 
                 <!-- پنل انتخاب -->
-                <div id="passengerPanel" class="hidden p-4 w-[200%]  border-t absolute top-full bg-gray-100/50 shadow-lg rounded-lg">
+                <div id="passengerPanel"
+                    class="hidden p-4 w-[200%]  border-t absolute top-full bg-gray-100 shadow-lg rounded-lg z-10">
                     <!-- بزرگسال -->
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center space-x-4 space-x-reverse">
@@ -241,6 +276,10 @@
                     </div>
                 </div>
             </div>
+
+
+
+
 
             <button class="px-8 h-12 text-lg font-semibold rounded-xl bg-primary2-90 text-black">جستجو</button>
             <!-- end numbers -->
@@ -1301,6 +1340,8 @@
     </script>
     <!-- origin input  -->
     <script src="../js/home/destination-input.js"></script>
+
+    <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
 
 </body>
 

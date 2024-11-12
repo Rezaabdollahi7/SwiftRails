@@ -4,6 +4,7 @@ import colors from 'tailwindcss/colors';
 module.exports = {
   content: [
     './src/**/*.{html,js,css}',
+    "./node_modules/flowbite/**/*.js"
   ],
   darkMode: 'media',
   theme: {
@@ -187,6 +188,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('flowbite/plugin'),
     // require('@tailwindcss/typography'),
     // require('@tailwindcss/aspect-ratio'),
 
