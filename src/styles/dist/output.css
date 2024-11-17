@@ -2212,10 +2212,6 @@ variants: group-hover;
   width: max-content;
 }
 
-.w-\[674px\] {
-  width: 674px;
-}
-
 .min-w-0 {
   min-width: 0px;
 }
@@ -2240,6 +2236,10 @@ variants: group-hover;
   max-width: 80rem;
 }
 
+.max-w-\[674px\] {
+  max-width: 674px;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -2262,10 +2262,6 @@ variants: group-hover;
 
 .max-w-xs {
   max-width: 20rem;
-}
-
-.max-w-\[674px\] {
-  max-width: 674px;
 }
 
 .flex-1 {
