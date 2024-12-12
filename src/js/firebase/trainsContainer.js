@@ -32,9 +32,18 @@ async function getTrains() {
 
         trainsList.forEach(train => {
             // Convert Firestore Timestamp to readable date format
-            const departureDate = train.departureDate
-                ? new Date(train.departureDate.seconds * 1000).toLocaleString('fa-IR')
+            // const departureDate = train.departureDate
+            //     ? new Date(train.departureDate.seconds * 1000).toLocaleString('fa-IR', {
+            //         timeZone: 'Asia/Tehran', // منطقه زمانی تهران
+            //     })
+            //     : 'تاریخ نامشخص';
+
+            const departureDate = train.departureTime
+                ? new Date(train.departureTime.seconds * 1000).toLocaleString('fa-IR', {
+                    timeZone: 'Asia/Tehran', // تنظیم منطقه زمانی تهران
+                })
                 : 'تاریخ نامشخص';
+
 
             // Handle possible undefined values for availableSeats, duration, and other fields
             const availableSeats = train.availableSeats !== undefined ? train.availableSeats : 'نامشخص';
