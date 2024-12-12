@@ -41,7 +41,7 @@ async function getTrains() {
                     <p><strong>قیمت:</strong> ${price} تومان</p>
                     <p><strong>صندلی‌های موجود:</strong> ${availableSeats}</p>
                     <p><strong>مدت سفر:</strong> ${duration} ساعت</p>
-                    <p><strong>تاریخ حرکت:</strong> ${departureDate}</p>
+                 
                 </div>
             `;
 

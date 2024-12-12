@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فیلتر قطارها</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,12 +68,26 @@
     </style>
 </head>
 
-<body>
-    <div id="searchContainer">
-        <input type="text" id="searchBox" placeholder="جستجوی قطارها بر اساس شهر..." onkeyup="filterTrains()">
-    </div>
 
-    <div id="trainList"></div>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <div class="flex flex-col md:flex-row gap-4 mb-6">
+                <input type="text" id="fromCityInput" placeholder="شهر مبدا"
+                    class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="text" id="toCityInput" placeholder="شهر مقصد"
+                    class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button id="searchButton"
+                    class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors">
+                    جستجو
+                </button>
+            </div>
+
+            <div id="trainList" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Train results will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
 
 
     <script src="../js/firebase/filterTrains.js" type="module"></script>
