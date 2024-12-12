@@ -32,8 +32,6 @@ async function addTrain(event) {
 
     try {
         // Convert the departureTime to a Firestore Timestamp
-     //   const departureTimestamp = Timestamp.fromDate(new Date(departureTime)); // Converts to Firebase Timestamp
-
         const departureTimestamp = Timestamp.fromDate(new Date(departureTime)); // تبدیل تاریخ به Firestore Timestamp
 
         // Create a new train object to add to the Firestore database
@@ -56,13 +54,18 @@ async function addTrain(event) {
         alert('قطار با موفقیت اضافه شد.');
 
         // Clear form inputs
-        document.getElementById('trainForm').reset();
+        document.getElementById('addTrainForm').reset();
 
     } catch (error) {
+        // Only show the alert if there was an error
         console.error("Error adding train:", error);
         alert('خطا در افزودن قطار.');
     }
 }
 
+
 // Attach event listener to the form submit button
-document.getElementById('addTrainForm').addEventListener('submit', addTrain);
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('addTrainForm').addEventListener('submit', addTrain);
+});
