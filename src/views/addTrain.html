@@ -1,39 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Train</title>
+    <link rel="stylesheet" href="../styles/dist/addTrain-output.css">
+    <link rel="shortcut icon" href="../assets/icons/train (1).svg" type="image/x-icon">
 </head>
 
-<body>
-    <form id="addTrainForm">
-        <label for="trainName">نام قطار:</label>
-        <input type="text" id="trainName" value="قطار سریع‌السیر تهران-شیراز" required><br><br>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center ">
 
-        <label for="from">مبدأ:</label>
-        <input type="text" id="from" value="تهران" required><br><br>
+    <form id="addTrainForm" class="bg-white shadow-lg rounded-lg p-8 max-w-lg w-full space-y-6">
+        <h2 class="text-2xl font-bold text-blue-700 text-center">فرم افزودن قطار</h2>
 
-        <label for="to">مقصد:</label>
-        <input type="text" id="to" value="شیراز" required><br><br>
+        <div>
+            <label for="trainName" class="block text-sm font-medium text-gray-700">نام قطار:</label>
+            <input type="text" id="trainName" value="قطار سریع‌السیر تهران-شیراز"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required>
+        </div>
 
-        <label for="price">قیمت (تومان):</label>
-        <input type="number" id="price" value="300000" required><br><br>
+        <div>
+            <label for="from" class="block text-sm font-medium text-gray-700">مبدأ:</label>
+            <input type="text" id="from" value="تهران"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required>
+        </div>
 
-        <label for="availableSeats">صندلی‌های موجود:</label>
-        <input type="number" id="availableSeats" value="50" required><br><br>
+        <div>
+            <label for="to" class="block text-sm font-medium text-gray-700">مقصد:</label>
+            <input type="text" id="to" value="شیراز"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required>
+        </div>
 
-        <label for="departureTime">تاریخ حرکت:</label>
-        <input type="datetime-local" id="departureTime" value="2024-12-15T10:00" required><br><br>
+        <div>
+            <label for="price" class="block text-sm font-medium text-gray-700">قیمت (تومان):</label>
+            <input type="number" id="price" value="300000"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required>
+        </div>
 
-        <label for="duration">مدت سفر (ساعت):</label>
-        <input type="number" id="duration" value="8" required><br><br>
+        <div>
+            <label for="availableSeats" class="block text-sm font-medium text-gray-700">صندلی‌های موجود:</label>
+            <input type="number" id="availableSeats" value="50"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required>
+        </div>
 
-        <label for="trainType">نوع قطار:</label>
-        <input type="text" id="trainType" value="قطار تندرو" required><br><br>
+        <div>
+            <label for="departureTime" class="block text-sm font-medium text-gray-700">تاریخ حرکت:</label>
+            <input type="datetime-local" id="departureTime" value="2024-12-15T10:00"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required>
+        </div>
 
-        <button type="submit">افزودن قطار</button>
+        <div>
+            <label for="duration" class="block text-sm font-medium text-gray-700">مدت سفر (ساعت):</label>
+            <input type="number" id="duration" value="8"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required>
+        </div>
+
+        <div>
+            <label for="seatType" class="block text-sm font-medium text-gray-700">انتخاب نوع صندلی:</label>
+            <select id="seatType"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required>
+                <option value="کوپه ای 2 نفره">کوپه ای 2 نفره</option>
+                <option value="کوپه ای 4 نفره">کوپه ای 4 نفره</option>
+                <option value="کوپه ای 6 نفره">کوپه ای 6 نفره</option>
+                <option value="سالنی 4 نفره">سالنی 4 نفره</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="travelCompany" class="block text-sm font-medium text-gray-700">انتخاب شرکت مسافربری:</label>
+            <select id="travelCompany"
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required>
+                <option value="ر‌جا">ر‌جا</option>
+                <option value="فدک">فدک</option>
+                <option value="نورالرضا">نورالرضا</option>
+                <option value="مهتاب">مهتاب</option>
+            </select>
+        </div>
+
+        <button type="submit"
+            class="w-full py-2 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            افزودن قطار
+        </button>
     </form>
 
     <script src="../js/firebase/addTrain.js" type="module"></script>

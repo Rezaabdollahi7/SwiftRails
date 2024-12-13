@@ -5,6 +5,7 @@ import { collection, addDoc, Timestamp } from "https://www.gstatic.com/firebasej
 async function addTrain(event) {
     event.preventDefault(); // Prevent the default form submission
 
+    // Get values from form fields
     const name = document.getElementById('trainName').value;
     const from = document.getElementById('from').value;
     const to = document.getElementById('to').value;
@@ -12,7 +13,8 @@ async function addTrain(event) {
     const availableSeats = parseInt(document.getElementById('availableSeats').value);
     const departureTime = document.getElementById('departureTime').value;
     const duration = document.getElementById('duration').value;
-    const trainType = document.getElementById('trainType').value;
+    const seatType = document.getElementById('seatType').value;
+    const travelCompany = document.getElementById('travelCompany').value;
 
     try {
         const departureTimestamp = Timestamp.fromDate(new Date(departureTime)); // Converts to Firestore Timestamp
@@ -25,7 +27,8 @@ async function addTrain(event) {
             availableSeats: availableSeats,
             departureTime: departureTimestamp, // Store Timestamp directly
             duration: duration,
-            trainType: trainType,
+            seatType: seatType, // Add seat type
+            travelCompany: travelCompany, // Add travel company
         };
 
         const docRef = await addDoc(collection(db, 'trains'), newTrain);
